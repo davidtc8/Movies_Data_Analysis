@@ -3,7 +3,15 @@
 ## Project Description 📓: 
 What can we say about the success of a movie 🎥 before it is released? That question 🤔 among others is what we're trying to figure out with this case study!
 
-## Questions addressed in this dataset:
+## Steps:
+For this project I did:
+- Data Assessing 🔍
+- Data Cleansing 🧹
+- Fixing Data Types 🔨
+- Exploratory Data Analysis 💡
+- Data Visualization 📈
+
+## Questions addressed in this dataset 🤔:
 - Highest revenue per year, and from which movie.
 - What's the genre that generated more revenue and which one is the genre that has the best votes.
 - Average Revenue per Genre from 1960-2015.
