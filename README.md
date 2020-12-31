@@ -18,5 +18,8 @@ For this project I did:
 - Correlations between Revenue and Budget.
 - Correlations between Budget and Popularity.
 
+## Example of the code:
+![data_analysis](data_analysis.gif)
+
 ## Credits:
 Data Analyst Udacity Nanodegree Course.
