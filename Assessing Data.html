@@ -13077,79 +13077,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Assessing-Data">Assessing Data<a class="anchor-link" href="#Assessing-Data">&#182;</a></h1><p>I'm creating this Jupyter Notebook to understand better the dimensions of the data I'll be working with, before I dive into the analysis phase.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><h2 id="To-do:">To do:<a class="anchor-link" href="#To-do:">&#182;</a></h2><p>In this part I will write any task that I have to do regarding the dataset, so I don't forget.</p>
-<ul>
-<li>[x] Make a column description of all the given columns in the <code>dataset</code>.</li>
-<li>[x] Understand how many rows and columns the dataset has.</li>
-<li>[x] Make a quick analysis about null values, and datatypes and from which columns are those null values.</li>
-<li>[x] How many unique values we have per column.</li>
-<li>[x] Make summary statistics about the whole dataset.</li>
-</ul>
-</blockquote>
-<h2 id="Summary:">Summary:<a class="anchor-link" href="#Summary:">&#182;</a></h2><ul>
-<li><a href="#column_descr">Columns Description</a></li>
-<li><a href="#dataset_shape">Dataset Shape</a></li>
-<li><a href="#dataset_info">Dataset Information</a></li>
-<li><a href="#null_info">Null Information</a></li>
-<li><a href="#unique_values">Unique Values</a></li>
-<li><a href="#summary_stats">Summary Statistics</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a id='column_descr'></a></p>
-<blockquote><h2 id="Column-Description:">Column Description:<a class="anchor-link" href="#Column-Description:">&#182;</a></h2><ul>
-<li><code>id</code>: The ID of the movie.</li>
-<li><code>imdb_id</code>: The ID from the Internet Movie Database (IMDb).</li>
-<li><code>popularity</code>: Popularity of a given movie.</li>
-<li><code>budget</code>: The budget that was required to develop the movie.</li>
-<li><code>revenue</code>: The revenue that the movie made.</li>
-<li><code>original_title</code>: The Title from the movie.</li>
-<li><code>cast</code>: The cast from the movie.</li>
-<li><code>homepage</code>: The webpage from the movie.</li>
-<li><code>director</code>: The director from the movie.</li>
-<li><code>tagline</code>: A phrase from a movie.</li>
-<li><code>keywords</code>: Keywords that are related to the movie.</li>
-<li><code>overview</code>: A short overview of the movie.</li>
-<li><code>runtime</code>: How long is the movie.</li>
-<li><code>genres</code>: The genre of the movie.</li>
-<li><code>production_companies</code>: The company that made the movie.</li>
-<li><code>release_date</code>: When was the movie released.</li>
-<li><code>vote_count</code>: How many voters, the movie had.</li>
-<li><code>vote_average</code>: The average of all the votes.</li>
-<li><code>release_year</code>: Budget to create the movie in 2010 USD Dollars.</li>
-<li><code>revenue_adj</code>: Budget that the movie made in 2010 USD Dollars.</li>
-</ul>
-</blockquote>
-<p>In total we have <strong>21 different variables in the dataset</strong></p>
+<h1 id="Assessing-Data">Assessing Data<a class="anchor-link" href="#Assessing-Data">&#182;</a></h1><p>Use the space below to explore <code>all_alpha_08.csv</code> and <code>all_alpha_18.csv</code> to answer the quiz questions below.</p>
 
 </div>
 </div>
@@ -13159,8 +13087,14 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;the_movies_database.csv&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="c1"># Load dataset</span>
+
+<span class="n">data_2008</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\David Torres\Desktop\Programming\Python\Data Analyst Udacity\Data Analysis Process-Case Study 2/all_alpha_08.csv&#39;</span><span class="p">)</span>
+<span class="n">data_2008</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13196,81 +13130,134 @@ div#notebook {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>id</th>
-      <th>imdb_id</th>
-      <th>popularity</th>
-      <th>budget</th>
-      <th>revenue</th>
-      <th>original_title</th>
-      <th>cast</th>
-      <th>homepage</th>
-      <th>director</th>
-      <th>tagline</th>
-      <th>...</th>
-      <th>overview</th>
-      <th>runtime</th>
-      <th>genres</th>
-      <th>production_companies</th>
-      <th>release_date</th>
-      <th>vote_count</th>
-      <th>vote_average</th>
-      <th>release_year</th>
-      <th>budget_adj</th>
-      <th>revenue_adj</th>
+      <th>Model</th>
+      <th>Displ</th>
+      <th>Cyl</th>
+      <th>Trans</th>
+      <th>Drive</th>
+      <th>Fuel</th>
+      <th>Sales Area</th>
+      <th>Stnd</th>
+      <th>Underhood ID</th>
+      <th>Veh Class</th>
+      <th>Air Pollution Score</th>
+      <th>FE Calc Appr</th>
+      <th>City MPG</th>
+      <th>Hwy MPG</th>
+      <th>Cmb MPG</th>
+      <th>Unadj Cmb MPG</th>
+      <th>Greenhouse Gas Score</th>
+      <th>SmartWay</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>135397</td>
-      <td>tt0369610</td>
-      <td>32.985763</td>
-      <td>150000000</td>
-      <td>1513528810</td>
-      <td>Jurassic World</td>
-      <td>Chris Pratt|Bryce Dallas Howard|Irrfan Khan|Vi...</td>
-      <td>http://www.jurassicworld.com/</td>
-      <td>Colin Trevorrow</td>
-      <td>The park is open.</td>
-      <td>...</td>
-      <td>Twenty-two years after the events of Jurassic ...</td>
-      <td>124</td>
-      <td>Action|Adventure|Science Fiction|Thriller</td>
-      <td>Universal Studios|Amblin Entertainment|Legenda...</td>
-      <td>6/9/2015</td>
-      <td>5562</td>
-      <td>6.5</td>
-      <td>2015</td>
-      <td>137999939.3</td>
-      <td>1.392446e+09</td>
+      <td>ACURA MDX</td>
+      <td>3.7</td>
+      <td>(6 cyl)</td>
+      <td>Auto-S5</td>
+      <td>4WD</td>
+      <td>Gasoline</td>
+      <td>CA</td>
+      <td>U2</td>
+      <td>8HNXT03.7PKR</td>
+      <td>SUV</td>
+      <td>7</td>
+      <td>Drv</td>
+      <td>15</td>
+      <td>20</td>
+      <td>17</td>
+      <td>22.0527</td>
+      <td>4</td>
+      <td>no</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>76341</td>
-      <td>tt1392190</td>
-      <td>28.419936</td>
-      <td>150000000</td>
-      <td>378436354</td>
-      <td>Mad Max: Fury Road</td>
-      <td>Tom Hardy|Charlize Theron|Hugh Keays-Byrne|Nic...</td>
-      <td>http://www.madmaxmovie.com/</td>
-      <td>George Miller</td>
-      <td>What a Lovely Day.</td>
-      <td>...</td>
-      <td>An apocalyptic story set in the furthest reach...</td>
-      <td>120</td>
-      <td>Action|Adventure|Science Fiction|Thriller</td>
-      <td>Village Roadshow Pictures|Kennedy Miller Produ...</td>
-      <td>5/13/2015</td>
-      <td>6185</td>
-      <td>7.1</td>
-      <td>2015</td>
-      <td>137999939.3</td>
-      <td>3.481613e+08</td>
+      <td>ACURA MDX</td>
+      <td>3.7</td>
+      <td>(6 cyl)</td>
+      <td>Auto-S5</td>
+      <td>4WD</td>
+      <td>Gasoline</td>
+      <td>FA</td>
+      <td>B5</td>
+      <td>8HNXT03.7PKR</td>
+      <td>SUV</td>
+      <td>6</td>
+      <td>Drv</td>
+      <td>15</td>
+      <td>20</td>
+      <td>17</td>
+      <td>22.0527</td>
+      <td>4</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ACURA RDX</td>
+      <td>2.3</td>
+      <td>(4 cyl)</td>
+      <td>Auto-S5</td>
+      <td>4WD</td>
+      <td>Gasoline</td>
+      <td>CA</td>
+      <td>U2</td>
+      <td>8HNXT02.3DKR</td>
+      <td>SUV</td>
+      <td>7</td>
+      <td>Drv</td>
+      <td>17</td>
+      <td>22</td>
+      <td>19</td>
+      <td>24.1745</td>
+      <td>5</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ACURA RDX</td>
+      <td>2.3</td>
+      <td>(4 cyl)</td>
+      <td>Auto-S5</td>
+      <td>4WD</td>
+      <td>Gasoline</td>
+      <td>FA</td>
+      <td>B5</td>
+      <td>8HNXT02.3DKR</td>
+      <td>SUV</td>
+      <td>6</td>
+      <td>Drv</td>
+      <td>17</td>
+      <td>22</td>
+      <td>19</td>
+      <td>24.1745</td>
+      <td>5</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ACURA RL</td>
+      <td>3.5</td>
+      <td>(6 cyl)</td>
+      <td>Auto-S5</td>
+      <td>4WD</td>
+      <td>Gasoline</td>
+      <td>CA</td>
+      <td>U2</td>
+      <td>8HNXV03.5HKR</td>
+      <td>midsize car</td>
+      <td>7</td>
+      <td>Drv</td>
+      <td>16</td>
+      <td>24</td>
+      <td>19</td>
+      <td>24.5629</td>
+      <td>5</td>
+      <td>no</td>
     </tr>
   </tbody>
 </table>
-<p>2 rows × 21 columns</p>
 </div>
 </div>
 
@@ -13279,23 +13266,14 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a id='dataset_shape'></a></p>
-<blockquote><h2 id="Dataset-Shape">Dataset Shape<a class="anchor-link" href="#Dataset-Shape">&#182;</a></h2><p>We can see that we're working with a Dataset that has 10,866 rows and 21 columns</p>
-</blockquote>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_2018</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\David Torres\Desktop\Programming\Python\Data Analyst Udacity\Data Analysis Process-Case Study 2/all_alpha_18.csv&#39;</span><span class="p">)</span>
+<span class="n">data_2018</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13308,364 +13286,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(10866, 21)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a id='dataset_info'></a></p>
-<blockquote><h2 id="Dataset-Information">Dataset Information<a class="anchor-link" href="#Dataset-Information">&#182;</a></h2><ul>
-<li>The datatype from the column named <code>release year</code> must be changed from <code>int64</code> to <code>date</code></li>
-<li>We have some columns with Null values like <code>homepage</code>, <code>keywords</code>, <code>production_companies</code>, and <code>cast</code>, among others, you can review more in the section of Null Information.</li>
-<li>We have 4 columns containing <code>float</code> data type, 6 with <code>integer</code> type and 11 with <code>strings</code>.</li>
-</ul>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 10866 entries, 0 to 10865
-Data columns (total 21 columns):
- #   Column                Non-Null Count  Dtype  
----  ------                --------------  -----  
- 0   id                    10866 non-null  int64  
- 1   imdb_id               10856 non-null  object 
- 2   popularity            10866 non-null  float64
- 3   budget                10866 non-null  int64  
- 4   revenue               10866 non-null  int64  
- 5   original_title        10866 non-null  object 
- 6   cast                  10790 non-null  object 
- 7   homepage              2936 non-null   object 
- 8   director              10822 non-null  object 
- 9   tagline               8042 non-null   object 
- 10  keywords              9373 non-null   object 
- 11  overview              10862 non-null  object 
- 12  runtime               10866 non-null  int64  
- 13  genres                10843 non-null  object 
- 14  production_companies  9836 non-null   object 
- 15  release_date          10866 non-null  object 
- 16  vote_count            10866 non-null  int64  
- 17  vote_average          10866 non-null  float64
- 18  release_year          10866 non-null  int64  
- 19  budget_adj            10866 non-null  float64
- 20  revenue_adj           10866 non-null  float64
-dtypes: float64(4), int64(6), object(11)
-memory usage: 1.7+ MB
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a id='null_info'></a></p>
-<blockquote><h2 id="Null-Information:">Null Information:<a class="anchor-link" href="#Null-Information:">&#182;</a></h2><p>We can see how many null values have per column</p>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>id                         0
-imdb_id                   10
-popularity                 0
-budget                     0
-revenue                    0
-original_title             0
-cast                      76
-homepage                7930
-director                  44
-tagline                 2824
-keywords                1493
-overview                   4
-runtime                    0
-genres                    23
-production_companies    1030
-release_date               0
-vote_count                 0
-vote_average               0
-release_year               0
-budget_adj                 0
-revenue_adj                0
-dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a id='unique_values'></a></p>
-<blockquote><h2 id="Number-of-Unique-Values:">Number of Unique Values:<a class="anchor-link" href="#Number-of-Unique-Values:">&#182;</a></h2><p>How many Unique Values have each column</p>
-<ul>
-<li>We can also appreciate that we have a lot of different genres in our dataset, however, this is very <strong>misleading</strong> because we have multiple entries separated by <strong>"|"</strong></li>
-<li>We also have too many different production companies</li>
-</ul>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>id                      10865
-imdb_id                 10855
-popularity              10814
-budget                    557
-revenue                  4702
-original_title          10571
-cast                    10719
-homepage                 2896
-director                 5067
-tagline                  7997
-keywords                 8804
-overview                10847
-runtime                   247
-genres                   2039
-production_companies     7445
-release_date             5909
-vote_count               1289
-vote_average               72
-release_year               56
-budget_adj               2614
-revenue_adj              4840
-dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;genres&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([&#39;Action|Adventure|Science Fiction|Thriller&#39;,
-       &#39;Adventure|Science Fiction|Thriller&#39;,
-       &#39;Action|Adventure|Science Fiction|Fantasy&#39;, ...,
-       &#39;Adventure|Drama|Action|Family|Foreign&#39;,
-       &#39;Comedy|Family|Mystery|Romance&#39;,
-       &#39;Mystery|Science Fiction|Thriller|Drama&#39;], dtype=object)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;production_companies&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([&#39;Universal Studios|Amblin Entertainment|Legendary Pictures|Fuji Television Network|Dentsu&#39;,
-       &#39;Village Roadshow Pictures|Kennedy Miller Productions&#39;,
-       &#39;Summit Entertainment|Mandeville Films|Red Wagon Entertainment|NeoReel&#39;,
-       ...,
-       &#39;Cherokee Productions|Joel Productions|Douglas &amp; Lewis Productions&#39;,
-       &#39;Benedict Pictures Corp.&#39;, &#39;Norm-Iris&#39;], dtype=object)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;popularity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[11]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([32.985763, 28.419936, 13.112507, ...,  0.065141,  0.064317,
-        0.035919])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a id='summary_stats'></a></p>
-<blockquote><h2 id="Summary-Statistics:">Summary Statistics:<a class="anchor-link" href="#Summary-Statistics:">&#182;</a></h2>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13688,122 +13309,131 @@ dtype: int64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>id</th>
-      <th>popularity</th>
-      <th>budget</th>
-      <th>revenue</th>
-      <th>runtime</th>
-      <th>vote_count</th>
-      <th>vote_average</th>
-      <th>release_year</th>
-      <th>budget_adj</th>
-      <th>revenue_adj</th>
+      <th>Model</th>
+      <th>Displ</th>
+      <th>Cyl</th>
+      <th>Trans</th>
+      <th>Drive</th>
+      <th>Fuel</th>
+      <th>Cert Region</th>
+      <th>Stnd</th>
+      <th>Stnd Description</th>
+      <th>Underhood ID</th>
+      <th>Veh Class</th>
+      <th>Air Pollution Score</th>
+      <th>City MPG</th>
+      <th>Hwy MPG</th>
+      <th>Cmb MPG</th>
+      <th>Greenhouse Gas Score</th>
+      <th>SmartWay</th>
+      <th>Comb CO2</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>count</th>
-      <td>10866.000000</td>
-      <td>10866.000000</td>
-      <td>1.086600e+04</td>
-      <td>1.086600e+04</td>
-      <td>10866.000000</td>
-      <td>10866.000000</td>
-      <td>10866.000000</td>
-      <td>10866.000000</td>
-      <td>1.086600e+04</td>
-      <td>1.086600e+04</td>
+      <th>0</th>
+      <td>ACURA RDX</td>
+      <td>3.5</td>
+      <td>6.0</td>
+      <td>SemiAuto-6</td>
+      <td>2WD</td>
+      <td>Gasoline</td>
+      <td>FA</td>
+      <td>T3B125</td>
+      <td>Federal Tier 3 Bin 125</td>
+      <td>JHNXT03.5GV3</td>
+      <td>small SUV</td>
+      <td>3</td>
+      <td>20</td>
+      <td>28</td>
+      <td>23</td>
+      <td>5</td>
+      <td>No</td>
+      <td>386</td>
     </tr>
     <tr>
-      <th>mean</th>
-      <td>66064.177434</td>
-      <td>0.646441</td>
-      <td>1.462570e+07</td>
-      <td>3.982332e+07</td>
-      <td>102.070863</td>
-      <td>217.389748</td>
-      <td>5.974922</td>
-      <td>2001.322658</td>
-      <td>1.755104e+07</td>
-      <td>5.136436e+07</td>
+      <th>1</th>
+      <td>ACURA RDX</td>
+      <td>3.5</td>
+      <td>6.0</td>
+      <td>SemiAuto-6</td>
+      <td>2WD</td>
+      <td>Gasoline</td>
+      <td>CA</td>
+      <td>U2</td>
+      <td>California LEV-II ULEV</td>
+      <td>JHNXT03.5GV3</td>
+      <td>small SUV</td>
+      <td>3</td>
+      <td>20</td>
+      <td>28</td>
+      <td>23</td>
+      <td>5</td>
+      <td>No</td>
+      <td>386</td>
     </tr>
     <tr>
-      <th>std</th>
-      <td>92130.136561</td>
-      <td>1.000185</td>
-      <td>3.091321e+07</td>
-      <td>1.170035e+08</td>
-      <td>31.381405</td>
-      <td>575.619058</td>
-      <td>0.935142</td>
-      <td>12.812941</td>
-      <td>3.430616e+07</td>
-      <td>1.446325e+08</td>
+      <th>2</th>
+      <td>ACURA RDX</td>
+      <td>3.5</td>
+      <td>6.0</td>
+      <td>SemiAuto-6</td>
+      <td>4WD</td>
+      <td>Gasoline</td>
+      <td>FA</td>
+      <td>T3B125</td>
+      <td>Federal Tier 3 Bin 125</td>
+      <td>JHNXT03.5GV3</td>
+      <td>small SUV</td>
+      <td>3</td>
+      <td>19</td>
+      <td>27</td>
+      <td>22</td>
+      <td>4</td>
+      <td>No</td>
+      <td>402</td>
     </tr>
     <tr>
-      <th>min</th>
-      <td>5.000000</td>
-      <td>0.000065</td>
-      <td>0.000000e+00</td>
-      <td>0.000000e+00</td>
-      <td>0.000000</td>
-      <td>10.000000</td>
-      <td>1.500000</td>
-      <td>1960.000000</td>
-      <td>0.000000e+00</td>
-      <td>0.000000e+00</td>
+      <th>3</th>
+      <td>ACURA RDX</td>
+      <td>3.5</td>
+      <td>6.0</td>
+      <td>SemiAuto-6</td>
+      <td>4WD</td>
+      <td>Gasoline</td>
+      <td>CA</td>
+      <td>U2</td>
+      <td>California LEV-II ULEV</td>
+      <td>JHNXT03.5GV3</td>
+      <td>small SUV</td>
+      <td>3</td>
+      <td>19</td>
+      <td>27</td>
+      <td>22</td>
+      <td>4</td>
+      <td>No</td>
+      <td>402</td>
     </tr>
     <tr>
-      <th>25%</th>
-      <td>10596.250000</td>
-      <td>0.207583</td>
-      <td>0.000000e+00</td>
-      <td>0.000000e+00</td>
-      <td>90.000000</td>
-      <td>17.000000</td>
-      <td>5.400000</td>
-      <td>1995.000000</td>
-      <td>0.000000e+00</td>
-      <td>0.000000e+00</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>20669.000000</td>
-      <td>0.383856</td>
-      <td>0.000000e+00</td>
-      <td>0.000000e+00</td>
-      <td>99.000000</td>
-      <td>38.000000</td>
-      <td>6.000000</td>
-      <td>2006.000000</td>
-      <td>0.000000e+00</td>
-      <td>0.000000e+00</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>75610.000000</td>
-      <td>0.713817</td>
-      <td>1.500000e+07</td>
-      <td>2.400000e+07</td>
-      <td>111.000000</td>
-      <td>145.750000</td>
-      <td>6.600000</td>
-      <td>2011.000000</td>
-      <td>2.085325e+07</td>
-      <td>3.369710e+07</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>417859.000000</td>
-      <td>32.985763</td>
-      <td>4.250000e+08</td>
-      <td>2.781506e+09</td>
-      <td>900.000000</td>
-      <td>9767.000000</td>
-      <td>9.200000</td>
-      <td>2015.000000</td>
-      <td>4.250000e+08</td>
-      <td>2.827124e+09</td>
+      <th>4</th>
+      <td>ACURA TLX</td>
+      <td>2.4</td>
+      <td>4.0</td>
+      <td>AMS-8</td>
+      <td>2WD</td>
+      <td>Gasoline</td>
+      <td>CA</td>
+      <td>L3ULEV125</td>
+      <td>California LEV-III ULEV125</td>
+      <td>JHNXV02.4WH3</td>
+      <td>small car</td>
+      <td>3</td>
+      <td>23</td>
+      <td>33</td>
+      <td>27</td>
+      <td>6</td>
+      <td>No</td>
+      <td>330</td>
     </tr>
   </tbody>
 </table>
@@ -13812,6 +13442,605 @@ dtype: int64</pre>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Number-of-samples-and-columns-in-each-dataset">Number of samples and columns in each dataset<a class="anchor-link" href="#Number-of-samples-and-columns-in-each-dataset">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Data 2008 Samples = 2404</p>
+<p>Data 2008 Columns = 18</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_2008</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 2404 entries, 0 to 2403
+Data columns (total 18 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   Model                 2404 non-null   object 
+ 1   Displ                 2404 non-null   float64
+ 2   Cyl                   2205 non-null   object 
+ 3   Trans                 2205 non-null   object 
+ 4   Drive                 2311 non-null   object 
+ 5   Fuel                  2404 non-null   object 
+ 6   Sales Area            2404 non-null   object 
+ 7   Stnd                  2404 non-null   object 
+ 8   Underhood ID          2404 non-null   object 
+ 9   Veh Class             2404 non-null   object 
+ 10  Air Pollution Score   2404 non-null   object 
+ 11  FE Calc Appr          2205 non-null   object 
+ 12  City MPG              2205 non-null   object 
+ 13  Hwy MPG               2205 non-null   object 
+ 14  Cmb MPG               2205 non-null   object 
+ 15  Unadj Cmb MPG         2205 non-null   float64
+ 16  Greenhouse Gas Score  2205 non-null   object 
+ 17  SmartWay              2404 non-null   object 
+dtypes: float64(2), object(16)
+memory usage: 338.2+ KB
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Data 2018 Samples = 1611</p>
+<p>Data 2018 Columns = 18</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_2018</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 1611 entries, 0 to 1610
+Data columns (total 18 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   Model                 1611 non-null   object 
+ 1   Displ                 1609 non-null   float64
+ 2   Cyl                   1609 non-null   float64
+ 3   Trans                 1611 non-null   object 
+ 4   Drive                 1611 non-null   object 
+ 5   Fuel                  1611 non-null   object 
+ 6   Cert Region           1611 non-null   object 
+ 7   Stnd                  1611 non-null   object 
+ 8   Stnd Description      1611 non-null   object 
+ 9   Underhood ID          1611 non-null   object 
+ 10  Veh Class             1611 non-null   object 
+ 11  Air Pollution Score   1611 non-null   int64  
+ 12  City MPG              1611 non-null   object 
+ 13  Hwy MPG               1611 non-null   object 
+ 14  Cmb MPG               1611 non-null   object 
+ 15  Greenhouse Gas Score  1611 non-null   int64  
+ 16  SmartWay              1611 non-null   object 
+ 17  Comb CO2              1611 non-null   object 
+dtypes: float64(2), int64(2), object(14)
+memory usage: 226.7+ KB
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Duplicate-rows-in-each-dataset">Duplicate rows in each dataset<a class="anchor-link" href="#Duplicate-rows-in-each-dataset">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Data 2008 Duplicate rows = 25</p>
+<p>Data 2018 Duplicate rows = 0</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">data_2008</span><span class="o">.</span><span class="n">duplicated</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>25</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">data_2018</span><span class="o">.</span><span class="n">duplicated</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Features-of-missing-values">Features of missing values<a class="anchor-link" href="#Features-of-missing-values">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Data 2008 Missing Values = 199</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">null</span> <span class="o">=</span> <span class="n">data_2008</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
+<span class="n">null</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Model                     0
+Displ                     0
+Cyl                     199
+Trans                   199
+Drive                    93
+Fuel                      0
+Sales Area                0
+Stnd                      0
+Underhood ID              0
+Veh Class                 0
+Air Pollution Score       0
+FE Calc Appr            199
+City MPG                199
+Hwy MPG                 199
+Cmb MPG                 199
+Unadj Cmb MPG           199
+Greenhouse Gas Score    199
+SmartWay                  0
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Data 2018 Missing Values = 2</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">null</span> <span class="o">=</span> <span class="n">data_2018</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
+<span class="n">null</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Model                   0
+Displ                   2
+Cyl                     2
+Trans                   0
+Drive                   0
+Fuel                    0
+Cert Region             0
+Stnd                    0
+Stnd Description        0
+Underhood ID            0
+Veh Class               0
+Air Pollution Score     0
+City MPG                0
+Hwy MPG                 0
+Cmb MPG                 0
+Greenhouse Gas Score    0
+SmartWay                0
+Comb CO2                0
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Unique-Values">Unique Values<a class="anchor-link" href="#Unique-Values">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_2008</span><span class="p">[</span><span class="s1">&#39;SmartWay&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;no&#39;, &#39;yes&#39;], dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_2018</span><span class="p">[</span><span class="s1">&#39;SmartWay&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;No&#39;, &#39;Yes&#39;, &#39;Elite&#39;], dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_2008</span><span class="p">[</span><span class="s1">&#39;Sales Area&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[30]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;CA&#39;, &#39;FA&#39;, &#39;FC&#39;], dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_2018</span><span class="p">[</span><span class="s1">&#39;Cert Region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[31]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;FA&#39;, &#39;CA&#39;], dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_2008</span><span class="p">[</span><span class="s1">&#39;Trans&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[32]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;Auto-S5&#39;, &#39;Man-6&#39;, &#39;Auto-S6&#39;, &#39;Auto-AV&#39;, &#39;Auto-S7&#39;, &#39;Auto-L4&#39;,
+       &#39;Auto-L6&#39;, &#39;Auto-4&#39;, &#39;Man-5&#39;, &#39;Auto-L5&#39;, nan, &#39;Auto-6&#39;, &#39;S8&#39;,
+       &#39;Auto-S4&#39;, &#39;Auto-L7&#39;], dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_2008</span><span class="p">[</span><span class="s1">&#39;Fuel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[33]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;Gasoline&#39;, &#39;ethanol/gas&#39;, &#39;ethanol&#39;, &#39;diesel&#39;, &#39;CNG&#39;],
+      dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_2018</span><span class="p">[</span><span class="s1">&#39;Fuel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[34]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;Gasoline&#39;, &#39;Gasoline/Electricity&#39;, &#39;Diesel&#39;, &#39;Ethanol/Gas&#39;,
+       &#39;Electricity&#39;], dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
