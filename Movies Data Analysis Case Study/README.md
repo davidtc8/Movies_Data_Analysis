@@ -9,8 +9,7 @@ Showing the reader a simple and graphical way the insights of your analysis.
 ## What is Matplotlib in Python?
 Natplotlib is a python library. Matplotlib is a 2D plot library that produces good quality figures, although it has it origin in emulating the MATLAB graphics commands, it is independent of Matlab, matplotlib consists of several plots like line, bar, scatter and histogram. In summary, plots help us in order to understand trends, patterns and to make a correlation.
 
-## Analysis 🧐:
-## Table of Contents
+## Table of Contents of the analysis 🧐:
 <ul>
 <li><a href="#eda"><b>Exploratory Data Analysis</b></a></li>
 <li><a href="#falfa"><b>Functions that I built</b></a></li>
@@ -49,4 +48,4 @@ Natplotlib is a python library. Matplotlib is a 2D plot library that produces go
 <li><a href="#conclusions"><b>Conclusions</b></a></li>
 
 ## Python Code 🤖:
-[Click Here](https://github.com/davidtc8/Movies_Data_Analysis/blob/master/Data%20Asessing/Assessing%20Data.ipynb) if you want to know more about how to _**clean data**_, this is a highly demand skill, because you will always encounter _**data quality issues**_.
+[Click Here](https://github.com/davidtc8/Movies_Data_Analysis/blob/master/Movies%20Data%20Analysis%20Case%20Study/Movies%20Data%20Analysis%20Case%20Study.ipynb) if you want to see the Python Code for data analysis. 
