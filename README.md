@@ -3,7 +3,7 @@
 ## Project Description 📓: 
 What can we say about the success of a movie 🎥 before it is released? That question 🤔 among others is what we're trying to figure out with this case study!
 
-## Steps:
+## Data Analysis Process ⚙️: 
 For this project I did:
 ### Assessing Data 🔍:
 [Click Here](https://github.com/davidtc8/Movies_Data_Analysis/tree/master/Data%20Asessing) if you want to know more about how to _**assess data**_ in Pandas.
