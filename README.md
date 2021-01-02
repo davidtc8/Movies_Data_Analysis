@@ -6,6 +6,7 @@ What can we say about the success of a movie 🎥 before it is released? That qu
 ## Steps:
 For this project I did:
 - Data Assessing 🔍
+[Click Here](https://github.com/davidtc8/Movies_Data_Analysis/tree/master/Data%20Asessing) if you want to know more about how to _**assess data**_ in Pandas.
 - Data Cleansing 🧹
 - Fixing Data Types 🔨
 - Exploratory Data Analysis 💡
