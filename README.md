@@ -17,7 +17,7 @@ For this project I did:
 ## Link to the case study and python code:
 [Click Here](https://github.com/davidtc8/Movies_Data_Analysis/blob/master/Movies%20Data%20Analysis%20Case%20Study/Movies%20Data%20Analysis%20Case%20Study.ipynb) if you want to see the case study in **Python**.
 
-## Example of the code:
+## Sneak peak of the project:
 ![data_analysis](data_analysis.gif)
 
 ## Credits:
