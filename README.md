@@ -5,10 +5,10 @@ What can we say about the success of a movie 🎥 before it is released? That qu
 
 ## Steps:
 For this project I did:
-### _**Step 1:**_ Assessing Data 🔍:
+### Assessing Data 🔍:
 [Click Here](https://github.com/davidtc8/Movies_Data_Analysis/tree/master/Data%20Asessing) if you want to know more about how to _**assess data**_ in Pandas.
 
-- Data Cleansing 🧹
+### Data Cleansing 🧹
 [Click Here](https://github.com/davidtc8/Movies_Data_Analysis/tree/master/Data%20cleansing%20and%20data%20wrangling) if you want to know more about how to _**clean data**_, this is a highly demand skill, because you will always encounter _**data quality issues**_.
 
 - Fixing Data Types 🔨
