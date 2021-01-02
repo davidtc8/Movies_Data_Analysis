@@ -9,6 +9,8 @@ For this project I did:
 [Click Here](https://github.com/davidtc8/Movies_Data_Analysis/tree/master/Data%20Asessing) if you want to know more about how to _**assess data**_ in Pandas.
 
 - Data Cleansing 🧹
+[Click Here](https://github.com/davidtc8/Movies_Data_Analysis/tree/master/Data%20cleansing%20and%20data%20wrangling) if you want to know more about how to _**clean data**_, this is a highly demand skill, because you will always encounter _**data quality issues**_.
+
 - Fixing Data Types 🔨
 - Exploratory Data Analysis 💡
 - Data Visualization 📈
