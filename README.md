@@ -14,12 +14,8 @@ For this project I did:
 ### Exploratory Data Analysis 💡 and Data Visualization 📈
 [Click Here](https://github.com/davidtc8/Movies_Data_Analysis/tree/master/Movies%20Data%20Analysis%20Case%20Study) if you want to know how to do _**exploratory data analysis**_.
 
-## Questions addressed in this dataset 🤔:
-- Highest revenue per year, and from which movie.
-- What's the genre that generated more revenue and which one is the genre that has the best votes.
-- Average Revenue per Genre from 1960-2015.
-- Correlations between Revenue and Budget.
-- Correlations between Budget and Popularity.
+## Link to the case study and python code:
+[Click Here](https://github.com/davidtc8/Movies_Data_Analysis/blob/master/Movies%20Data%20Analysis%20Case%20Study/Movies%20Data%20Analysis%20Case%20Study.ipynb) if you want to see the case study in **Python**.
 
 ## Example of the code:
 ![data_analysis](data_analysis.gif)
