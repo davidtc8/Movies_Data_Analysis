@@ -11,7 +11,7 @@ For this project I did:
 ### Data Cleansing 🧹
 [Click Here](https://github.com/davidtc8/Movies_Data_Analysis/tree/master/Data%20cleansing%20and%20data%20wrangling) if you want to know more about how to _**clean data**_, this is a highly demand skill, because you will always encounter _**data quality issues**_.
 
-###Exploratory Data Analysis 💡 and Data Visualization 📈
+### Exploratory Data Analysis 💡 and Data Visualization 📈
 
 ## Questions addressed in this dataset 🤔:
 - Highest revenue per year, and from which movie.
